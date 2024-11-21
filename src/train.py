@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 
 if __name__ == '__main__':
-    df = pd.read_csv('data/train.csv')
+    df = pd.read_csv('../data/train.csv')
 
     X_train = df.drop('classification', axis=1)
     y_train = df['classification']
