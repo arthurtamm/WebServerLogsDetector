@@ -69,19 +69,34 @@ def bool_to_int(df):
             df[column] = df[column].astype(int)
     return df
 
-def preprocess():
-    data = pd.read_csv('../data/logs.csv')
-    preprocess_pipeline = Pipeline([
-        ('select_columns', FunctionTransformer(lambda df: df[['method','URL', 'content', 'accept', 'classification']])),
+def preprocess_pipeline(include_label=True):
+    """
+    Cria a pipeline de pré-processamento.
+    - include_label: Define se a coluna 'classification' será selecionada (para treino).
+    """
+    steps = [
+        ('select_columns', FunctionTransformer(lambda df: 
+            df[['method', 'URL', 'content', 'accept'] + (['classification'] if include_label else [])]
+        )),
         ('extract_url_info', FunctionTransformer(extract_url_info)),
         ('accept_transformation', FunctionTransformer(accept_transformation)),
         ('content_transformation', FunctionTransformer(content_transformation)),
         ('method_encoding', FunctionTransformer(method_one_hot)),
         ('bool_to_int', FunctionTransformer(bool_to_int)),
-    ])
+    ]
+    return Pipeline(steps)
 
-    data_transformed = preprocess_pipeline.fit_transform(data)
-    data_transformed.to_csv('../data/train.csv', index=False)
+# Ajustar a função de preprocessamento de treino
+def preprocess(data, include_label=True):
+    """
+    Preprocessa dados para treino ou predição.
+    - data: DataFrame de entrada.
+    - include_label: Define se inclui a coluna 'classification'.
+    """
+    pipeline = preprocess_pipeline(include_label=include_label)
+    return pipeline.fit_transform(data)
 
 if __name__ == "__main__":
-    preprocess()
+    data = pd.read_csv('../data/logs.csv')
+    preprocessed_data = preprocess(data)
+    preprocessed_data.to_csv('../data/train.csv', index=False)

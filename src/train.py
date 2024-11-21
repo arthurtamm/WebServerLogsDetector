@@ -5,8 +5,8 @@ import pickle
 if __name__ == '__main__':
     df = pd.read_csv('data/train.csv')
 
-    X_train = df.drop('Clasification', axis=1)
-    y_train = df['Clasification']
+    X_train = df.drop('classification', axis=1)
+    y_train = df['classification']
 
     model = RandomForestClassifier(
         max_depth=20,
@@ -15,5 +15,5 @@ if __name__ == '__main__':
     )
     model.fit(X_train, y_train)
     
-    with open("random_forest", 'wb') as file:
+    with open("./models/random_forest", 'wb') as file:
         pickle.dump(model, file)

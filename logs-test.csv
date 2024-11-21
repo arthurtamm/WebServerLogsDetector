@@ -1,0 +1,17 @@
+Method,URL,content,Accept,host
+GET,/,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",-
+GET,/galo,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",-
+GET,/scarpa,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",-
+GET,/favicon.ico,,"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",192.168.15.8
+GET,/,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8
+GET,/teste,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8
+GET,/galo,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8
+GET,/public/anadir.jsp,id=4&name=Paella&price=30&quantity=5 OR 1=1&B1=Add to cart,*/*,192.168.15.8
+GET,/public/authenticate.jsp,mode=login&username=<svg onload=alert('XSS')>&password=mypassword&remember=off&B1=Sign in,*/*,192.168.15.8
+GET,/public/features.jsp,id=../../confidential.txt,*/*,192.168.15.8
+GET,/public/register.jsp,mode=register&username=user1&password=pass1&first_name=user1&address=127.0.0.1; ls -la;&city=City&postal_code=12345&state=TestState&credit_card=4111111111111111&B1=Register,*/*,192.168.15.8
+GET,/galo,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8
+GET,/galo,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8
+GET,/galo,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8
+GET,/galo,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8
+GET,/galo,,"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",192.168.15.8

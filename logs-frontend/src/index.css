@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: hidden; /* Evita overflow horizontal */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-container button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-container button:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-container button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed; /* Define um layout fixo para a tabela */
+}
+
+.log-table th, .log-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word; /* Permite a quebra de palavras muito longas */
+  overflow-wrap: anywhere; /* Adiciona mais suporte para quebra de texto */
+}
+
+.log-table th {
+  background-color: #f4f4f4;
+}
+
+.log-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.log-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.log-table tr.malicious {
+  background-color: #ffe6e6;
+}
+
+.log-table tr.non-malicious {
+  background-color: #e6ffe6;
+}
+
+.no-logs {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+/* Estilização para logs muito grandes */
+.log-table td:first-child {
+  max-width: 400px; /* Define um limite de largura para a coluna do log */
+  white-space: normal; /* Permite quebra de linha */
+}
+
+.log-table-container {
+  max-height: 500px; /* Altura máxima da tabela */
+  overflow-y: auto; /* Adiciona scroll vertical se necessário */
+  border: 1px solid #ddd; /* Adiciona borda para a tabela rolável */
+}
+
