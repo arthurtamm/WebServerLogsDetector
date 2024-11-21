@@ -124,5 +124,5 @@ def monitor_logs_with_websocket(log_path, model_path):
 
 if __name__ == "__main__":
     log_path = "/var/log/apache2/access.log"
-    model_path = "models/random_forest"
+    model_path = "../models/random_forest"
     monitor_logs_with_websocket(log_path, model_path)
