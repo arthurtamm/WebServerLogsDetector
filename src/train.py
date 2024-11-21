@@ -15,5 +15,5 @@ if __name__ == '__main__':
     )
     model.fit(X_train, y_train)
     
-    with open("./models/random_forest", 'wb') as file:
+    with open("../models/random_forest", 'wb') as file:
         pickle.dump(model, file)
